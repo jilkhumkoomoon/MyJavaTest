@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="mvvm1"
+            type="com.mycode.myjavatest.mvvm.viewmodel.MvvmModel1" />
+
+        <variable
+            name="mvvm2"
+            type="com.mycode.myjavatest.mvvm.viewmodel.MvvmModel2" />
+
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:background="@color/cardview_dark_background"
+            android:text="@{mvvm1.name1}"
+            android:onClick="@{mvvm1.tvMvvmOnClick}"
+            android:id = "@+id/tv_mvvm1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+        <TextView
+            android:background="@color/cardview_dark_background"
+            android:layout_marginTop="20dp"
+            android:text="@{mvvm2.name2}"
+            android:onClick="@{mvvm2.tvMvvmOnClick}"
+            android:id = "@+id/tv_mvvm2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+
+    </LinearLayout>
+</layout>
