@@ -5,6 +5,10 @@ public interface IContractor {
         void setTimer(String timer);
     }
 
+    interface IPresenter extends ILifeCircle {
+        void initTimer();
+    }
+
     Iview emptyView = new Iview() {
         @Override
         public void setTimer(String timer) {

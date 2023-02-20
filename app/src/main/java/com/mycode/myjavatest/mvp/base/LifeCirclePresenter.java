@@ -27,10 +27,13 @@ public abstract class LifeCirclePresenter<T extends MvpView> implements ILifeCir
     public LifeCirclePresenter(T iMvpView) {
         super();
 
+        /**
+         * p绑定view
+         * */
         attachView(iMvpView);
 
         /**
-         * 这里创建静态代理
+         * 这里创建静态代理对象，创建的过程中
          * */
         MvpControler controler = iMvpView.getMvpControler();
         controler.savePresenter(this);

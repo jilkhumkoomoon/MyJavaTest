@@ -3,11 +3,11 @@ package com.mycode.myjavatest.mvp;
 import com.mycode.myjavatest.MainActivity;
 import com.mycode.myjavatest.mvp.base.BasePresenter;
 
-public class SplashTimerPresenter extends BasePresenter<MvpView>  {
+public class SplashTimerPresenter extends BasePresenter<IContractor.Iview>  implements IContractor.IPresenter {
 
     private CustomCountDownTimer timer;
 
-    public SplashTimerPresenter(MvpView iMvpView) {
+    public SplashTimerPresenter(IContractor.Iview iMvpView) {
         super(iMvpView);
     }
 
@@ -36,7 +36,7 @@ public class SplashTimerPresenter extends BasePresenter<MvpView>  {
         cancel();
     }
     @Override
-    protected MvpView getEmptyView() {
+    protected IContractor.Iview getEmptyView() {
         return IContractor.emptyView;
     }
 }

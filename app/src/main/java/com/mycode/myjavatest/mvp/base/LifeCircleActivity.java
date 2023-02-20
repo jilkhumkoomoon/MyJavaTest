@@ -11,7 +11,7 @@ import com.mycode.myjavatest.mvp.MvpView;
 
 public class LifeCircleActivity extends AppCompatActivity implements MvpView {
 
-    private MvpControler mvpControler = null;
+    private MvpControler mvpControler ;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -20,7 +20,7 @@ public class LifeCircleActivity extends AppCompatActivity implements MvpView {
         if(intent == null) {
             intent = new Intent();
         }
-        MvpControler mvpControler = getMvpControler();
+        MvpControler mvpControler = this.getMvpControler();
         if(mvpControler != null) {
             mvpControler.onCreate(savedInstanceState,intent,null);
         }
@@ -30,11 +30,10 @@ public class LifeCircleActivity extends AppCompatActivity implements MvpView {
 
     @Override
     public MvpControler getMvpControler() {
-        return null;
+        if(this.mvpControler == null) {
+            this.mvpControler = new MvpControler();
+        }
+        return this.mvpControler;
     }
 
-    @Override
-    public void setTimer(String timer) {
-
-    }
 }
