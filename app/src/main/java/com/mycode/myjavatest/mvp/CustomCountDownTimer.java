@@ -2,6 +2,7 @@ package com.mycode.myjavatest.mvp;
 
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.os.Looper;
 
 public class CustomCountDownTimer implements Runnable{
 
@@ -12,9 +13,9 @@ public class CustomCountDownTimer implements Runnable{
     private HandlerThread mMediaHandlerThread ;
 
     public CustomCountDownTimer(int time, ICountDownHandler countDownHandler){
-        mMediaHandlerThread = new HandlerThread("CustomCountDownTimer");
-        mMediaHandlerThread.start();
-        this.handler = new Handler(mMediaHandlerThread.getLooper()) ;
+//        mMediaHandlerThread = new HandlerThread();
+//        mMediaHandlerThread.start();
+        this.handler = new Handler(Looper.getMainLooper()) ;
         this.countDownTime = time;
         this.countDownHandler = countDownHandler;
     }
@@ -52,6 +53,7 @@ public class CustomCountDownTimer implements Runnable{
     public void setCountDownTime(int time) {
         this.countDownTime = time;
     }
+
     public interface ICountDownHandler{
         void onTicker(int time);
 

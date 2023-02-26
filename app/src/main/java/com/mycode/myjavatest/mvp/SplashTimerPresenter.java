@@ -16,7 +16,6 @@ public class SplashTimerPresenter extends BasePresenter<IContractor.Iview>  impl
             @Override
             public void onTicker(int time) {
                 getView().setTimer(time + "秒");
-
             }
 
             @Override
