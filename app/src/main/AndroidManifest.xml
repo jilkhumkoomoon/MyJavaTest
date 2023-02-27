@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyJavaTest">
-        <activity android:name=".mvp.MvpActivity">
+        <activity android:name=".room.RoomActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
