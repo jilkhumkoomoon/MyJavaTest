@@ -1,2 +1,3 @@
+include ':SimpleWechat'
 include ':app'
 rootProject.name = "MyJavaTest"

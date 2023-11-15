@@ -1,5 +1,7 @@
 package com.mycode.myjavatest.mvvm;
 
+
+
 import com.mycode.myjavatest.BR;
 import com.mycode.myjavatest.R;
 import com.mycode.myjavatest.databinding.ActivityMvvmBinding;

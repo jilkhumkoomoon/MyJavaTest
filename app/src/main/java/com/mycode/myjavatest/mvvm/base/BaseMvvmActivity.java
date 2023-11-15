@@ -11,7 +11,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
-import com.mycode.myjavatest.BR;
+//import com.mycode.myjavatest.BR;
 import com.mycode.myjavatest.mvvm.MvvmViewInject;
 
 public abstract class BaseMvvmActivity<V extends ViewDataBinding> extends AppCompatActivity {
