@@ -1,3 +1,4 @@
 include ':SimpleWechat'
 include ':app'
 rootProject.name = "MyJavaTest"
+include ':module-arouter-java'
