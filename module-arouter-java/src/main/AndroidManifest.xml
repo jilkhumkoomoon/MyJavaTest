@@ -2,4 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.moon.module_arouter_java">
 
+    <application>
+        <activity android:name=".TradeDetailActivity"/>
+    </application>
+
 </manifest>
